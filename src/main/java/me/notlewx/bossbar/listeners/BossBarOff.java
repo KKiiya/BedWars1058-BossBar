@@ -12,7 +12,8 @@ import org.bukkit.event.EventHandler;
 import com.andrei1058.bedwars.api.arena.GameState;
 import com.andrei1058.bedwars.api.arena.GameState.*;
 import me.notlewx.bossbar.listeners.BossBarOn;
-import static com.andrei1058.bedwars.api.arena.GameState.playing;
+
+import static com.andrei1058.bedwars.api.arena.GameState.*;
 
 public class BossBarOff implements Listener {
     @EventHandler
@@ -24,7 +25,9 @@ public class BossBarOff implements Listener {
         if (ArenaStatus == playing) {
             BossBar bar = Bukkit.createBossBar("", BarColor.PURPLE, BarStyle.SOLID);
             bar.getPlayers();
-
+        }
+        else if (ArenaStatus == null || ArenaStatus == restarting) {
+            String h = "";
         }
     }
 }
