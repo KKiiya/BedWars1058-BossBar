@@ -1,6 +1,8 @@
 package me.notlewx.bossbar;
 
 import com.andrei1058.bedwars.api.BedWars;
+import me.notlewx.bossbar.config.config;
+import me.notlewx.bossbar.listeners.BossBarOff;
 import me.notlewx.bossbar.listeners.BossBarOn;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -17,10 +19,11 @@ public final class Bossbar extends JavaPlugin {
         else {
             System.out.println("BedWars1058 Found! Hooking...");
         }
-
         BedWars bedwarsAPI = Bukkit.getServicesManager().getRegistration(BedWars .class).getProvider();
 
         getServer().getPluginManager().registerEvents(new BossBarOn(), this);
+        getServer().getPluginManager().registerEvents(new BossBarOff(), this);
+        getServer().getPluginManager().registerEvents(new config(), this);
     }
 
     @Override
@@ -28,6 +31,6 @@ public final class Bossbar extends JavaPlugin {
         // Plugin shutdown logic
     }
     public static Bossbar getPlugins() {
-        return (Bossbar)getPlugin(Bossbar.class);
+        return getPlugin(Bossbar.class);
     }
 }

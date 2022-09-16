@@ -4,8 +4,9 @@ import me.notlewx.bossbar.Bossbar;
 import com.andrei1058.bedwars.api.configuration.ConfigManager;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.event.Listener;
 
-public class config {
+public class config implements Listener {
         public static ConfigManager config;
         public static final String ANIM_1 = "anim-1";
         public static final String ANIM_2 = "anim-2";
