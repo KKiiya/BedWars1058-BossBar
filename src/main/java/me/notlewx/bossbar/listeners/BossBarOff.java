@@ -26,7 +26,7 @@ public class BossBarOff implements Listener {
             BossBar bar = Bukkit.createBossBar("", BarColor.PURPLE, BarStyle.SOLID);
             bar.getPlayers();
         }
-        else if (ArenaStatus == null || ArenaStatus == restarting) {
+        else if (ArenaStatus == null || ArenaStatus == restarting || ArenaStatus == waiting) {
             String h = "";
         }
     }
