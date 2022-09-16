@@ -2,8 +2,9 @@ package me.notlewx.bossbar;
 
 import com.andrei1058.bedwars.api.BedWars;
 import me.notlewx.bossbar.config.config;
-import me.notlewx.bossbar.listeners.BossBarOff;
-import me.notlewx.bossbar.listeners.BossBarOn;
+import me.notlewx.bossbar.listeners.ArenaLeave;
+import me.notlewx.bossbar.listeners.ArenaJoin;
+import me.notlewx.bossbar.listeners.GameStart;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -21,8 +22,9 @@ public final class Bossbar extends JavaPlugin {
         }
         BedWars bedwarsAPI = Bukkit.getServicesManager().getRegistration(BedWars .class).getProvider();
 
-        getServer().getPluginManager().registerEvents(new BossBarOn(), this);
-        getServer().getPluginManager().registerEvents(new BossBarOff(), this);
+        getServer().getPluginManager().registerEvents(new ArenaJoin(), this);
+        getServer().getPluginManager().registerEvents(new ArenaLeave(), this);
+        getServer().getPluginManager().registerEvents(new GameStart(), this);
         getServer().getPluginManager().registerEvents(new config(), this);
     }
 
