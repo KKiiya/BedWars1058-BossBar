@@ -32,5 +32,9 @@ public class ArenaListener implements Listener {
             bar.addPlayer(p);
             bar.setVisible(true);
         }
+        if (ArenaStatus == playing) {
+            bar.removePlayer(p);
+            bar.setVisible(false);
+        }
     }
 }
