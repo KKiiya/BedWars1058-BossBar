@@ -2,6 +2,9 @@ package me.notlewx.bossbar.listeners;
 
 import com.andrei1058.bedwars.api.arena.IArena;
 import com.andrei1058.bedwars.api.events.gameplay.GameStateChangeEvent;
+import org.bukkit.Bukkit;
+import org.bukkit.boss.BarColor;
+import org.bukkit.boss.BarStyle;
 import org.bukkit.boss.BossBar;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
@@ -19,7 +22,9 @@ public class BossBarOff implements Listener {
 
         GameState ArenaStatus = arena.getStatus();
         if (ArenaStatus == playing) {
-            BossBarOn bar = new BossBarOn();
+            BossBar bar = Bukkit.createBossBar("", BarColor.PURPLE, BarStyle.SOLID);
+            bar.getPlayers();
+
         }
     }
 }

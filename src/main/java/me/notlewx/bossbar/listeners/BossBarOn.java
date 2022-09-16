@@ -21,7 +21,7 @@ public class BossBarOn implements Listener {
         Player p = e.getPlayer();
         GameState ArenaStatus = arena.getStatus();
 
-        String message = (ChatColor.translateAlternateColorCodes('&', ChatColor.WHITE + "&lPlaying " + ChatColor.YELLOW + ChatColor.BOLD + "BED WARS" + ChatColor.WHITE + ChatColor.BOLD + " on " + ChatColor.AQUA + ChatColor.BOLD + "MC.EXAMPLE.NET"));
+        String message = (ChatColor.translateAlternateColorCodes('&', ChatColor.YELLOW + "&lPlaying " + ChatColor.WHITE + ChatColor.BOLD + "BED WARS" + ChatColor.YELLOW + ChatColor.BOLD + " on " + ChatColor.AQUA + ChatColor.BOLD + "MC.EXAMPLE.NET"));
         BarColor color = BarColor.PURPLE;
         BarStyle style = BarStyle.SOLID;
         BossBar bar = Bukkit.createBossBar(message, color, style);
