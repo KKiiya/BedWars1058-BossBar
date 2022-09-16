@@ -1,7 +1,7 @@
 package me.notlewx.bossbar;
 
 import com.andrei1058.bedwars.api.BedWars;
-import me.notlewx.bossbar.listeners.ArenaListener;
+import me.notlewx.bossbar.listeners.BossBarOn;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -20,11 +20,14 @@ public final class Bossbar extends JavaPlugin {
 
         BedWars bedwarsAPI = Bukkit.getServicesManager().getRegistration(BedWars .class).getProvider();
 
-        getServer().getPluginManager().registerEvents(new ArenaListener(), this);
+        getServer().getPluginManager().registerEvents(new BossBarOn(), this);
     }
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+    }
+    public static Bossbar getPlugins() {
+        return (Bossbar)getPlugin(Bossbar.class);
     }
 }

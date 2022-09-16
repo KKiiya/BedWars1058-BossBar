@@ -1,7 +1,5 @@
 package me.notlewx.bossbar.listeners;
 
-import com.andrei1058.bedwars.api.events.gameplay.GameStateChangeEvent;
-import me.clip.placeholderapi.libs.kyori.adventure.platform.facet.Facet;
 import org.bukkit.boss.BossBar;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
@@ -15,7 +13,7 @@ import com.andrei1058.bedwars.api.arena.IArena;
 import com.andrei1058.bedwars.api.events.player.PlayerJoinArenaEvent;
 import com.andrei1058.bedwars.api.arena.GameState;
 
-public class ArenaListener implements Listener {
+public class BossBarOn implements Listener {
 
     @EventHandler
     public static void onArenaJoinEvent(PlayerJoinArenaEvent e) {
