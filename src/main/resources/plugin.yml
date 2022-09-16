@@ -1,0 +1,5 @@
+name: Bossbar
+version: '${project.version}'
+main: me.notlewx.bossbar.Bossbar
+prefix: BedWars1058-BossBar
+authors: [ NotLew_x ]
