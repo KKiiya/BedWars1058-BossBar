@@ -3,12 +3,14 @@ package me.notlewx.bossbar.config;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.event.Listener;
+
 import java.io.File;
 import java.io.IOException;
 
 
 
-public class CustomConfig {
+public class CustomConfig implements Listener {
 
     private static File file;
     private static FileConfiguration customFile;
