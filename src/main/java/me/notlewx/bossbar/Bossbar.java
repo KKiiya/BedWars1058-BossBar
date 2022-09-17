@@ -4,6 +4,7 @@ import com.andrei1058.bedwars.api.BedWars;
 import me.notlewx.bossbar.config.CustomConfig;
 import me.notlewx.bossbar.listeners.ArenaLeave;
 import me.notlewx.bossbar.listeners.ArenaJoin;
+import me.notlewx.bossbar.listeners.GameEnd;
 import me.notlewx.bossbar.listeners.GameStart;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -23,11 +24,12 @@ public final class Bossbar extends JavaPlugin {
         else {
             System.out.println("BedWars1058 Found! Hooking...");
         }
-        BedWars bedwarsAPI = Bukkit.getServicesManager().getRegistration(BedWars.class).getProvider();
+        BedWars bedwarsAPI = Bukkit.getServicesManager().getRegistration(BedWars .class).getProvider();
 
         getServer().getPluginManager().registerEvents(new ArenaJoin(), this);
         getServer().getPluginManager().registerEvents(new ArenaLeave(), this);
         getServer().getPluginManager().registerEvents(new GameStart(), this);
+        getServer().getPluginManager().registerEvents(new GameEnd(), this);
         getServer().getPluginManager().registerEvents(new CustomConfig(), this);
 
         config.options().copyDefaults(true);
