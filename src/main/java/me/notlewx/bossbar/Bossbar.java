@@ -22,23 +22,18 @@ public final class Bossbar extends JavaPlugin {
             return;
         }
         else {
-            System.out.println("BedWars1058 Found! Hooking...");
+            System.out.println("[BedWars1058-BossBar] BedWars1058 Found! Hooking...");
         }
-        BedWars bedwarsAPI = Bukkit.getServicesManager().getRegistration(BedWars .class).getProvider();
 
-        getServer().getPluginManager().registerEvents(new ArenaJoin(), this);
-        getServer().getPluginManager().registerEvents(new ArenaLeave(), this);
-        getServer().getPluginManager().registerEvents(new GameStart(), this);
-        getServer().getPluginManager().registerEvents(new GameEnd(), this);
-        getServer().getPluginManager().registerEvents(new CustomConfig(), this);
-
-        config.options().copyDefaults(true);
         saveDefaultConfig();
 
-        CustomConfig.setup();
-        CustomConfig.get().addDefault("bossbar", "&e&lPlaying &f&lBED WARS &f&lon &b&lMC.EXAMPLE.NET");
-        CustomConfig.get().options().copyDefaults(true);
-        CustomConfig.save();
+        BedWars bedwarsAPI = Bukkit.getServicesManager().getRegistration(BedWars .class).getProvider();
+
+        Bukkit.getPluginManager().registerEvents(new ArenaJoin(), this);
+        Bukkit.getPluginManager().registerEvents(new ArenaLeave(), this);
+        Bukkit.getPluginManager().registerEvents(new GameStart(), this);
+        Bukkit.getPluginManager().registerEvents(new GameEnd(), this);
+        Bukkit.getPluginManager().registerEvents(new CustomConfig(), this);
     }
 
     @Override

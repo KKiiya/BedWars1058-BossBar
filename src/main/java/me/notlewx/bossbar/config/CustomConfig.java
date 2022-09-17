@@ -1,10 +1,11 @@
 package me.notlewx.bossbar.config;
 
+import me.notlewx.bossbar.Bossbar;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.Listener;
-
+import org.bukkit.plugin.Plugin;
 import java.io.File;
 import java.io.IOException;
 
@@ -16,16 +17,16 @@ public class CustomConfig implements Listener {
     private static FileConfiguration customFile;
 
     public static void setup() {
-        file = new File(Bukkit.getServer().getPluginManager().getPlugin("bossbar").getDataFolder(), "config.yml");
+        file = new File(getInstance().getDataFolder(), "config.yml");
 
         if (!file.exists()) {
-            try {
-                file.createNewFile();
-            }catch (IOException e) {
-                //Config files
-            }
+            CustomConfig.getInstance().saveResource("config.yml", false);
         }
         customFile = YamlConfiguration.loadConfiguration(file);
+    }
+
+    private static Plugin getInstance() {
+        return Bossbar.getPlugins();
     }
 
     public static FileConfiguration get(){
