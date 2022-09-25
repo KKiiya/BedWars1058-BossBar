@@ -17,9 +17,9 @@ public class ArenaJoin implements Listener {
             bar.addPlayer(p);
             bar.setVisible(true);
         }
-        else {
-            bar.removePlayer(p);
+        else if (!join){
             bar.setVisible(false);
+            bar.removePlayer(p);
         }
 
         if (e.isSpectator() && spec) {
@@ -27,8 +27,8 @@ public class ArenaJoin implements Listener {
             bar.setVisible(true);
         }
         else if (!spec) {
-            bar.removePlayer(p);
             bar.setVisible(false);
+            bar.removePlayer(p);
         }
     }
 }
