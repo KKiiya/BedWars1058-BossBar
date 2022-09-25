@@ -1,5 +1,5 @@
 # BedWars1058-BossBar
-NOTE: THIS ADDON IS NOT FINISHED YET SO DONT USE IT
+NOTE: THIS ADDON IS ALMOST FINISHED
 
 
 This is a bossbar addon for the plugin BedWars1058
