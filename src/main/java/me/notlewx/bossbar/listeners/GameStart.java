@@ -4,7 +4,7 @@ import com.andrei1058.bedwars.api.events.gameplay.TeamAssignEvent;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import static me.notlewx.bossbar.listeners.ArenaJoin.bar;
+import static me.notlewx.bossbar.bossbar.bossbar.bar;
 
 
 public class GameStart implements Listener {

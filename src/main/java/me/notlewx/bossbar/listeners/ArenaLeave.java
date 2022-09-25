@@ -4,7 +4,7 @@ import com.andrei1058.bedwars.api.events.player.PlayerLeaveArenaEvent;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.event.EventHandler;
-import static me.notlewx.bossbar.listeners.ArenaJoin.bar;
+import static me.notlewx.bossbar.bossbar.bossbar.bar;
 
 public class ArenaLeave implements Listener {
     @EventHandler

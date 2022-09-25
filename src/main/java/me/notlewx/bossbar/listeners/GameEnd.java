@@ -5,7 +5,7 @@ import com.andrei1058.bedwars.api.events.gameplay.GameEndEvent;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.event.EventHandler;
-import static me.notlewx.bossbar.listeners.ArenaJoin.bar;
+import static me.notlewx.bossbar.bossbar.bossbar.bar;
 
 public class GameEnd implements Listener {
 
