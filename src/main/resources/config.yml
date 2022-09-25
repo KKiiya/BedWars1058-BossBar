@@ -1,1 +1,6 @@
 bossbar: "&e&lPlaying &f&lBED WARS &e&lon &b&lMC.EXAMPLE.NET"
+bossbar-at-waiting-state: true
+bossbar-when-joining-as-spec: true
+bossbar-at-game-end: true
+
+longer-game-end: true

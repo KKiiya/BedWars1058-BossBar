@@ -1,6 +1,6 @@
 package me.notlewx.bossbar;
 
-import com.andrei1058.bedwars.api.BedWars;
+import me.notlewx.bossbar.bossbar.bossbar;
 import me.notlewx.bossbar.config.CustomConfig;
 import me.notlewx.bossbar.listeners.ArenaLeave;
 import me.notlewx.bossbar.listeners.ArenaJoin;
@@ -27,8 +27,7 @@ public final class Bossbar extends JavaPlugin {
 
         saveDefaultConfig();
 
-        BedWars bedwarsAPI = Bukkit.getServicesManager().getRegistration(BedWars .class).getProvider();
-
+        Bukkit.getPluginManager().registerEvents(new bossbar(), this);
         Bukkit.getPluginManager().registerEvents(new ArenaJoin(), this);
         Bukkit.getPluginManager().registerEvents(new ArenaLeave(), this);
         Bukkit.getPluginManager().registerEvents(new GameStart(), this);

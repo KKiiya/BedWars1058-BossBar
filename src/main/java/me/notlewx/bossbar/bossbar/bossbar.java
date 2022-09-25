@@ -7,7 +7,6 @@ import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarStyle;
 import org.bukkit.boss.BossBar;
 import org.bukkit.event.Listener;
-import me.notlewx.bossbar.config.CustomConfig;
 
 public class bossbar implements Listener {
     static BarColor color = BarColor.PURPLE;
