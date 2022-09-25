@@ -1,7 +1,6 @@
-package me.notlewx.bossbar.config;
+package me.notlewx.bossbar.bossbar_plugin.config;
 
-import me.notlewx.bossbar.Bossbar;
-import org.bukkit.Bukkit;
+import me.notlewx.bossbar.bossbar_plugin.src.main.java.me.notlewx.bossbar.Bossbar;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.Listener;

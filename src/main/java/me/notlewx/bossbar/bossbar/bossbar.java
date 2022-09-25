@@ -1,6 +1,6 @@
 package me.notlewx.bossbar.bossbar;
 
-import me.notlewx.bossbar.Bossbar;
+import me.notlewx.bossbar.bossbar_plugin.src.main.java.me.notlewx.bossbar.Bossbar;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.boss.BarColor;
@@ -13,9 +13,5 @@ public class bossbar implements Listener {
     static BarStyle style = BarStyle.SOLID;
     static String message = ChatColor.translateAlternateColorCodes('&', Bossbar.getPlugins().getConfig().getString("bossbar"));
     public static BossBar bar = Bukkit.createBossBar(message, color, style );
-    public static boolean join = Bossbar.getPlugins().getConfig().getBoolean("bossbar-at-waiting-state");
-    public static boolean end = Bossbar.getPlugins().getConfig().getBoolean("bossbar-at-game-end");
-    public static boolean spec = Bossbar.getPlugins().getConfig().getBoolean("bossbar-when-joining-as-spec");
-
 }
 

@@ -1,6 +1,6 @@
 name: Bossbar
 version: '${project.version}'
-main: me.notlewx.bossbar.Bossbar
+main: me.notlewx.bossbar.bossbar_plugin.src.main.java.me.notlewx.bossbar.Bossbar
 prefix: BedWars1058-BossBar
 softdepend: [ BedWars1058 ]
 authors: [ NotLew_x ]

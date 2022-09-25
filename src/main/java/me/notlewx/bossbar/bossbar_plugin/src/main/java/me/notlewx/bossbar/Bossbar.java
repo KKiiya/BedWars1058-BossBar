@@ -1,11 +1,11 @@
-package me.notlewx.bossbar;
+package me.notlewx.bossbar.bossbar_plugin.src.main.java.me.notlewx.bossbar;
 
 import me.notlewx.bossbar.bossbar.bossbar;
-import me.notlewx.bossbar.config.CustomConfig;
-import me.notlewx.bossbar.listeners.ArenaLeave;
-import me.notlewx.bossbar.listeners.ArenaJoin;
-import me.notlewx.bossbar.listeners.GameEnd;
-import me.notlewx.bossbar.listeners.GameStart;
+import me.notlewx.bossbar.bossbar_plugin.config.CustomConfig;
+import me.notlewx.bossbar.versionsupport_common.src.main.java.me.notlewx.bossbar.listeners.ArenaLeave;
+import me.notlewx.bossbar.versionsupport_common.src.main.java.me.notlewx.bossbar.listeners.ArenaJoin;
+import me.notlewx.bossbar.versionsupport_common.src.main.java.me.notlewx.bossbar.listeners.GameEnd;
+import me.notlewx.bossbar.versionsupport_common.src.main.java.me.notlewx.bossbar.listeners.GameStart;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;

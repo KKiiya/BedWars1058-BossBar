@@ -1,4 +1,4 @@
-package me.notlewx.bossbar.listeners;
+package me.notlewx.bossbar.versionsupport_common.src.main.java.me.notlewx.bossbar.listeners;
 
 import com.andrei1058.bedwars.api.arena.IArena;
 import com.andrei1058.bedwars.api.events.gameplay.GameEndEvent;
