@@ -2,11 +2,11 @@ package me.notlewx.bossbar.listeners;
 
 import com.andrei1058.bedwars.api.arena.IArena;
 import com.andrei1058.bedwars.api.events.gameplay.GameEndEvent;
-import me.notlewx.bossbar.Bossbar;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.event.EventHandler;
 import static me.notlewx.bossbar.bossbar.bossbar.bar;
+import static me.notlewx.bossbar.bossbar.bossbar.end;
 
 public class GameEnd implements Listener {
 
@@ -19,16 +19,17 @@ public class GameEnd implements Listener {
              bar.setVisible(true);
          }
 
-        boolean end = Bossbar.getPlugins().getConfig().getBoolean("bossbar-at-game-end");
-
         if (end) {
             for (Player player : arena.getPlayers()) {
                 bar.addPlayer(player);
                 bar.setVisible(true);
             }
         }
-        else {
-            return;
+        else if (!end) {
+            for (Player player : arena.getPlayers()) {
+                bar.setVisible(false);
+                bar.removePlayer(player);
+            }
         }
     }
 }

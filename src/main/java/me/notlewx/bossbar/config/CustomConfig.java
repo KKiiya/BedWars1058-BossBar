@@ -17,7 +17,7 @@ public class CustomConfig implements Listener {
     private static FileConfiguration customFile;
 
     public static void setup() {
-        file = new File(getInstance().getDataFolder(), "config.yml");
+        file = new File("plugins/BedWars1058/Addons/Bossbar");
 
         if (!file.exists()) {
             CustomConfig.getInstance().saveResource("config.yml", false);
