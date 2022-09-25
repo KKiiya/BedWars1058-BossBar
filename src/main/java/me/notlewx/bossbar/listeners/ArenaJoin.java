@@ -10,8 +10,8 @@ public class ArenaJoin implements Listener {
     @EventHandler
     public static void onArenaJoinEvent(PlayerJoinArenaEvent e) {
         Player p = e.getPlayer();
-            bar.addPlayer(p);
             bar.setVisible(true);
+            bar.addPlayer(p);
     }
 }
 
