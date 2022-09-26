@@ -1,7 +1,0 @@
-bossbar: "&e&lPlaying &f&lBED WARS &e&lon &b&lMC.EXAMPLE.NET"
-
-# This will be added in the future
-# Will not take any effect if you modify it
-bossbar-at-waiting-state: true
-bossbar-when-joining-as-spec: true
-bossbar-at-game-end: true
