@@ -1,0 +1,4 @@
+name: me.notlewx.bossbar.Bossbar
+version: '${project.version}'
+main: me.notlewx.bossbar.me.notlewx.bossbar.Bossbar
+authors: [ NotLew_x ]
