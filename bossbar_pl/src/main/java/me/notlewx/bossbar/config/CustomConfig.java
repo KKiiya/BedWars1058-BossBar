@@ -1,6 +1,6 @@
 package me.notlewx.bossbar.config;
 
-import me.notlewx.bossbar.bossbar_plugin.src.main.java.me.notlewx.bossbar.Bossbar;
+import me.notlewx.bossbar.Bossbar;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.event.Listener;
@@ -16,7 +16,7 @@ public class CustomConfig implements Listener {
     private static FileConfiguration customFile;
 
     public static void setup() {
-        file = new File("plugins/BedWars1058/Addons/me.notlewx.bossbar.Bossbar");
+        file = new File("plugins/BedWars1058/Addons/Bossbar");
 
         if (!file.exists()) {
             CustomConfig.getInstance().saveResource("config.yml", false);

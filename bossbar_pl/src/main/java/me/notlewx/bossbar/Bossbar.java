@@ -1,14 +1,12 @@
 package me.notlewx.bossbar;
 
-import me.notlewx.bossbar.bossbar.bossbar_api1;
-import me.notlewx.bossbar.bossbar_plugin.config.CustomConfig;
-import me.notlewx.bossbar.versionsupport_common.src.main.java.me.notlewx.bossbar.listeners.ArenaLeave;
-import me.notlewx.bossbar.versionsupport_common.src.main.java.me.notlewx.bossbar.listeners.ArenaJoin;
-import me.notlewx.bossbar.versionsupport_common.src.main.java.me.notlewx.bossbar.listeners.GameEnd;
-import me.notlewx.bossbar.versionsupport_common.src.main.java.me.notlewx.bossbar.listeners.GameStart;
+import me.notlewx.bossbar.support.version.v1_8_R3.bossbar_api;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
+import me.notlewx.bossbar.listeners.*;
+import me.notlewx.bossbar.config.CustomConfig;
 
 public final class Bossbar extends JavaPlugin {
 
@@ -27,7 +25,7 @@ public final class Bossbar extends JavaPlugin {
 
         saveDefaultConfig();
 
-        Bukkit.getPluginManager().registerEvents(new bossbar_api1(), this);
+        Bukkit.getPluginManager().registerEvents(new bossbar_api(), this);
         Bukkit.getPluginManager().registerEvents(new ArenaJoin(), this);
         Bukkit.getPluginManager().registerEvents(new ArenaLeave(), this);
         Bukkit.getPluginManager().registerEvents(new GameStart(), this);
