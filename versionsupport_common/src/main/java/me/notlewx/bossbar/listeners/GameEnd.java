@@ -5,7 +5,7 @@ import com.andrei1058.bedwars.api.events.gameplay.GameEndEvent;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.event.EventHandler;
-import static me.notlewx.bossbar.bossbar.bossbar_api1.bar;
+import static me.notlewx.bossbar.bossbar.bossbar.bar;
 
 public class GameEnd implements Listener {
 
@@ -14,8 +14,8 @@ public class GameEnd implements Listener {
     public static void onGameEnd(GameEndEvent e) {
          IArena arena = e.getArena();
          for (Player player : arena.getPlayers()) {
-             bossbar_api1.bar.addPlayer(player);
-             bossbar_api1.bar.setVisible(true);
+             bar.addPlayer(player);
+             bar.setVisible(true);
          }
     }
 }

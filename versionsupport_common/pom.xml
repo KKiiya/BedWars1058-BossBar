@@ -26,6 +26,11 @@
             <version>1.12.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>me.notlewx.bossbar</groupId>
+            <artifactId>bossbar-pl</artifactId>
+            <version>1.2</version>
+        </dependency>
     </dependencies>
 
     <build>

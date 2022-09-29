@@ -1,9 +1,8 @@
 package me.notlewx.bossbar;
 
-import me.notlewx.bossbar.support.version.v1_8_R3.bossbar_api;
+import me.notlewx.bossbar.support.version.v1_8_R3.bossbar;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
-import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 import me.notlewx.bossbar.listeners.*;
 import me.notlewx.bossbar.config.CustomConfig;
@@ -25,7 +24,8 @@ public final class Bossbar extends JavaPlugin {
 
         saveDefaultConfig();
 
-        Bukkit.getPluginManager().registerEvents(new bossbar_api(), this);
+        Bukkit.getPluginManager().registerEvents(new bossbar(), this);
+        Bukkit.getPluginManager().registerEvents(new me.notlewx.bossbar.bossbar.bossbar(), this);
         Bukkit.getPluginManager().registerEvents(new ArenaJoin(), this);
         Bukkit.getPluginManager().registerEvents(new ArenaLeave(), this);
         Bukkit.getPluginManager().registerEvents(new GameStart(), this);

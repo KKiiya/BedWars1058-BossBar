@@ -1,6 +1,7 @@
 package me.notlewx.bossbar.common;
 
 import com.andrei1058.bedwars.api.server.VersionSupport;
+import me.notlewx.bossbar.Bossbar;
 import me.notlewx.bossbar.bossbar_plugin.src.main.java.me.notlewx.bossbar.Bossbar;
 import me.notlewx.bossbar.listeners.ArenaJoin;
 import me.notlewx.bossbar.listeners.ArenaLeave;
