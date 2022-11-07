@@ -6,11 +6,12 @@
    <parent>
       <artifactId>BedWars1058-BossBar</artifactId>
       <groupId>me.notlewx.bossbar</groupId>
-      <version>1.2</version>
+      <version>1.3</version>
    </parent>
 
+    <packaging>pom</packaging>
     <artifactId>versionsupport_1_8_R3</artifactId>
-    <version>${project.parent.version}</version>
+    <version>1.3</version>
 
     <repositories>
         <repository>
@@ -42,7 +43,14 @@
         <dependency>
             <groupId>me.notlewx.bossbar</groupId>
             <artifactId>versionsupport-common</artifactId>
-            <version>1.2</version>
+            <version>1.3</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>me.notlewx.bossbar</groupId>
+            <artifactId>bossbar-pl</artifactId>
+            <version>1.3</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
@@ -53,6 +61,22 @@
                 <configuration>
                     <skip>true</skip>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

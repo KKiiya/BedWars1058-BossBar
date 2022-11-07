@@ -69,11 +69,11 @@ public class bossbar extends BukkitRunnable implements Listener {
         }
     }
 
-    public void setTitle(String t) {
-        this.m = t;
+    public void setTitle(String title) {
+        this.m = title;
         for (Map.Entry<Player, EntityWither> entry : bar.entrySet()) {
             EntityWither w = entry.getValue();
-            w.setCustomName(t);
+            w.setCustomName(title);
             PacketPlayOutEntityMetadata packet = new PacketPlayOutEntityMetadata(w.getId(), w.getDataWatcher(), true);
             (((CraftPlayer)entry.getKey()).getHandle()).playerConnection.sendPacket(packet);
         }

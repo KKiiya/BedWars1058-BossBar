@@ -6,7 +6,7 @@
 
     <groupId>me.notlewx.bossbar</groupId>
     <artifactId>BedWars1058-BossBar</artifactId>
-    <version>1.2</version>
+    <version>1.3</version>
     <packaging>pom</packaging>
     <name>me.notlewx.bossbar.Bossbar</name>
 
@@ -14,6 +14,13 @@
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <pluginRepositories>
+    <pluginRepository>
+        <id>maven-snapshots</id>
+        <url>https://repository.apache.org/content/repositories/snapshots/</url>
+    </pluginRepository>
+   </pluginRepositories>
 
     <build>
         <plugins>
@@ -51,6 +58,12 @@
         </resources>
     </build>
 
+    <modules>
+        <module>bossbar_pl</module>
+        <module>versionsupport_common</module>
+        <module>versionsupport_1_8_R3</module>
+    </modules>
+
     <repositories>
         <repository>
             <id>spigot-repo</id>
@@ -71,12 +84,6 @@
     </repositories>
 
     <dependencies>
-        <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.12.2-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
         <!--BedWars1058 API-->
         <dependency>
             <groupId>com.andrei1058.bedwars</groupId>
